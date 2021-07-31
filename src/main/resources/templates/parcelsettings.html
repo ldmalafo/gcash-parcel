@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+Lorenzo Malafo Jr.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Lorenzo Malafo Exam - API - GCash - Settings</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/css/parcelui.css}"/>
+    </head>
+    <body>
+        <div class="test-title">
+            <a href="/">Home</a> | <a href="parceltest">Parcel Calculator Testing</a> | <a class="current-page" href="parcelsettings">Parcel Calculator Settings</a>
+        </div>
+        <div class="full-width">
+            <div class="column column-half">
+                <div class="header">Calculator Settings</div>
+                <div class="content">
+                    <div class="input-label"><label for="txtReject">Rejected Weight (kg)</label></div>
+                    <input class="input-field" id="txtReject" type="number" min="0" max="10000" th:value="${reject}"/>
+                    
+                    <div class="input-label"><label for="txtHeavy">Heavy Weight Minimum (kg)</label></div>
+                    <input class="input-field" id="txtHeavy" type="number" min="0" max="10000" th:value="${heavy}"/>
+                    
+                    <div class="input-label mtop-10"><label for="txtMaxSmall">Small Parcel Max Volume (cm<sup>3</sup>)</label></div>
+                    <input class="input-field" id="txtMaxSmall" type="number" min="0" max="1000000" th:value="${smallparcel}"/>
+                    
+                    <div class="input-label"><label for="txtMaxMedium">Medium Parcel Max Volume (cm<sup>3</sup>)</label></div>
+                    <input class="input-field" id="txtMaxMedium" type="number" min="0" max="1000000" th:value="${mediumparcel}"/>
+                    <span class="note"><strong>Note:</strong> Anything above medium parcel volume is considered <u>Large Parcel</u>.</span>
+                    
+                    <div class="input-label mtop-10"><label for="txtPriceWeight">Weight Price (price / kg)</label></div>
+                    <input class="input-field" id="txtPriceWeight" type="number" min="0" max="10000" th:value="${heavycost}"/>
+                    
+                    <div class="input-label"><label for="txtPriceSmall">Small Parcel Price (price / cm<sup>3</sup>)</label></div>
+                    <input class="input-field" id="txtPriceSmall" type="number" min="0" max="10000" th:value="${smallcost}"/>
+                    
+                    <div class="input-label"><label for="txtPriceMedium">Medium Parcel Price (price / cm<sup>3</sup>)</label></div>
+                    <input class="input-field" id="txtPriceMedium" type="number" min="0" max="10000" th:value="${mediumcost}"/>
+                    
+                    <div class="input-label"><label for="txtPriceLarge">Large Parcel Price (price / cm<sup>3</sup>)</label></div>
+                    <input class="input-field" id="txtPriceLarge" type="number" min="0" max="10000" th:value="${largecost}"/>
+                </div>
+                <div class="footer botton-container">
+                    <span id="spnParcelSaving" class="hidden"></span>
+                    <button id="btnUpdateSettings" class="input-button">Save Settings</button>
+                </div>
+            </div>
+            <div class="column column-half">
+                <div class="header">Voucher Settings</div>
+                <div class="content">
+                    <div class="input-label"><label for="txtVoucherUrl">Voucher API Base URL</label></div>
+                    <input class="input-field" id="txtVoucherUrl" type="text" maxlength="500" th:value="${apiurl}"/>
+                    
+                    <div class="input-label"><label for="txtAPIKey">API Key</label></div>
+                    <input class="input-field" id="txtAPIKey" type="text" maxlength="100" th:value="${apikey}"/>
+                </div>
+                <div class="footer botton-container">
+                    <span id="spnVoucherSaving" class="hidden"></span>
+                    <button id="btnUpdateVoucher" class="input-button">Save Settings</button>
+                </div>
+            </div>
+        </div>
+        <div class="full-width foot-note">Author: Lorenzo D. Malafo Jr.</div>
+        <script type="text/javascript" th:src="@{/js/jquery-3.6.0.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/parcelsettings.js}"></script>
+    </body>
+</html>

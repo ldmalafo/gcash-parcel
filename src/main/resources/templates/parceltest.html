@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+Lorenzo Malafo Jr.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Lorenzo Malafo Exam - API - GCash - Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/css/parcelui.css}"/>
+    </head>
+    <body>
+        <div class="test-title">
+            <a href="/">Home</a> | <a class="current-page" href="parceltest">Parcel Calculator Testing</a> | <a href="parcelsettings">Parcel Calculator Settings</a>
+        </div>
+        <div class="full-width">
+            <div class="column column-third">
+                <div class="header">Sample Form Submission</div>
+                <div class="content">
+                    <div class="input-label"><label for="txtWeight">Weight (kg)</label></div>
+                    <input class="input-field" id="txtWeight" type="number" min="0" max="1000000000" value="0"/>
+                    
+                    <div class="input-label"><label for="txtLength">Length (cm)</label></div>
+                    <input class="input-field" id="txtLength" type="number" min="0" max="100000" value="0"/>
+                    
+                    <div class="input-label"><label for="txtWidth">Width (cm)</label></div>
+                    <input class="input-field" id="txtWidth" type="number" min="0" max="100000" value="0"/>
+                    
+                    <div class="input-label"><label for="txtHeight">Height (cm)</label></div>
+                    <input class="input-field" id="txtHeight" type="number" min="0" max="100000" value="0"/>
+                    
+                    <div class="input-label"><label for="txtVoucher">Voucher Code</label></div>
+                    <input class="input-field" id="txtVoucher" type="text" maxlength="100"/>
+                    <span class="note"><strong>Note:</strong> Valid codes are MYNT and GFI.</span>
+                    
+                    <div class="input-field">
+                        <input type="checkbox" checked="checked" id="chkIgnoreExpire"/>
+                        <label for="chkIgnoreExpire">Ignore Voucher Expiration Date</label>
+                    </div>
+                </div>
+                <div class="footer botton-container">
+                    <button id="btnSubmitData" class="input-button">Calculate</button>
+                    <button id="btnReset" class="input-button">Reset</button>
+                </div>
+            </div>
+            <div class="column column-third">
+                <div class="header">Request Data</div>
+                <div class="content">
+                    <textarea id="textRequestData" class="output-text" rows="23"></textarea>
+                </div>
+            </div>
+            <div class="column column-third">
+                <div class="header">Response Data</div>
+                <div class="content">
+                    <textarea id="textResponseData" class="output-text" rows="23"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="full-width foot-note">Author: Lorenzo D. Malafo Jr.</div>
+        <script type="text/javascript" th:src="@{/js/jquery-3.6.0.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/parceltest.js}"></script>
+    </body>
+</html>

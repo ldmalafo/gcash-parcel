@@ -1,0 +1,108 @@
+/* 
+    Created on : 30 Jul 2021, 19:44:10
+    Author     : lorenzomalafo
+*/
+
+* { box-sizing: border-box; }
+
+.test-title {
+    font-size: x-large;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 10px 15px 10px;
+}
+
+.test-title a { 
+    text-decoration: none; 
+    color: black;
+    padding-bottom: 5px;
+}
+
+.test-title a:hover {
+    color: blue;
+}
+
+.current-page {
+    border-bottom: 1px solid black;
+}
+
+.full-width { width: 100%; }
+
+.full-width:after { 
+    content: "";
+    display: block; 
+    clear: both; 
+}
+
+.column { float: left; padding: 5px; }
+
+.column-full { width: 100%; }
+
+.column-half { width: 50%; }
+
+.column-third { width: 33%; }
+
+.column .header { 
+    width: 100%; 
+    background-color: black; 
+    color: greenyellow; 
+    padding: 10px;
+    font-size: larger;
+}
+
+.column .content {
+    width: 100%; 
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+.column .footer {
+    width: 100%;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
+
+.botton-container {
+    text-align: right;
+}
+
+.input-label {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.input-field {
+    padding: 5px;
+    width: 100%;
+    font-size: large;
+}
+
+.output-text {
+    padding: 5px;
+    width: 100%;
+    font-size: medium;
+}
+
+.input-button {
+    padding: 15px 30px 15px 30px;
+    font-size: medium;
+}
+
+.note {
+    font-size: small;
+    font-style: italic;
+}
+
+.mtop-10 { margin-top: 10px; }
+
+.foot-note {
+    text-align: left;
+    font-size: large;
+    color: blue;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.hidden { display: none; }
